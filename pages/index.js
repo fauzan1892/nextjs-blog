@@ -4,7 +4,6 @@ import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
-
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
   return {
@@ -15,10 +14,7 @@ export async function getStaticProps() {
 }
 export default function Home({ allPostsData }) {
   return (
-    <Layout home>
-      <Head>
-        <title>My Blog</title>
-      </Head>
+    <Layout home siteTitle='My Blog'>
       <p>
         Hello, I’m <strong>Fauzan</strong>. I’m a software engineer. 
         {/* You can contact me on{' '}
